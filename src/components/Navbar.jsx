@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
 
 const navItems = [
   { name: 'Yo', href: '#inicio' },
@@ -13,6 +14,15 @@ export default function Navbar() {
     if (target) {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  };
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/Hoja de Vida - Nicolas Oved Rodriguez Moreno.pdf';
+    link.download = 'Hoja de Vida - Nicolas Oved Rodriguez Moreno.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -33,6 +43,19 @@ export default function Navbar() {
             {item.name}
           </motion.a>
         ))}
+        
+        <motion.button
+          className="nav-link cv-button"
+          onClick={handleDownloadCV}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: navItems.length * 0.1, duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Download size={18} />
+          Hoja de Vida
+        </motion.button>
       </div>
     </nav>
   );
