@@ -65,7 +65,7 @@ export default function ProjectCard({ project }) {
 
 export function ProjectsSection() {
   return (
-    <div className="projects-section">
+    <div className="projects-section" id="produccion">
       <h2 className="projects-title">Aplicaciones en Producción</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (

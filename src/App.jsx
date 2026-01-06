@@ -6,13 +6,15 @@ import SplashCursor from './components/SplashCursor'
 import { ProjectsSection } from './components/ProjectsSection'
 import AboutSection from './components/AboutSection'
 import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <>
+      <Navbar />
       <SplashCursor />
       <ClickSpark />
-      <div className="portfolio">
+      <div className="portfolio" id="inicio">
         <div className="container">
           <ScrollFloat delay={0}>
             <img src="/Foto nico.png" alt="Nicolás Rodríguez" className="profile-photo" />

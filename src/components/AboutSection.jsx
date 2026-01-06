@@ -43,7 +43,7 @@ const socialLinks = [
 
 export default function AboutSection() {
   return (
-    <div className="about-section">
+    <div className="about-section" id="sobre-mi">
       <ScrollFloat delay={0.2}>
         <h2 className="about-title">Sobre Mí</h2>
       </ScrollFloat>
