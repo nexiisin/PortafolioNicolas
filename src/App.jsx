@@ -1,57 +1,26 @@
-import './App.css'
-import ClickSpark from './components/ClickSpark'
-import ScrollFloat from './components/ScrollFloat'
-import LogoLoop from './components/LogoLoop'
-import SplashCursor from './components/SplashCursor'
-import { ProjectsSection } from './components/ProjectsSection'
-import AboutSection from './components/AboutSection'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+
+import './App.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import About from './components/About';
+import Projects from './components/Projects';
+import Process from './components/Process';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+
 
 function App() {
   return (
     <>
       <Navbar />
-      <SplashCursor />
-      <ClickSpark />
-      <div className="portfolio" id="inicio">
-        <div className="container">
-          <ScrollFloat delay={0}>
-            <img src="/Foto nico.png" alt="Nicolás Rodríguez" className="profile-photo" />
-          </ScrollFloat>
-          
-          <ScrollFloat delay={0.1}>
-            <p className="role">Desarrollador Full Stack</p>
-          </ScrollFloat>
-          
-          <ScrollFloat delay={0.2}>
-            <p className="subtitle">CEO — Nexis Web</p>
-          </ScrollFloat>
-          
-          <ScrollFloat delay={0.3}>
-            <h1 className="name">Nicolás Rodríguez</h1>
-          </ScrollFloat>
-          
-          <ScrollFloat delay={0.4}>
-            <p className="description">
-              Creo experiencias digitales modernas y funcionales,<br />
-              combinando diseño elegante con soluciones tecnológicas eficientes.
-            </p>
-          </ScrollFloat>
-        </div>
-      </div>
-      
-      <ScrollFloat delay={0.5}>
-        <LogoLoop speed={40} />
-      </ScrollFloat>
-      
-      <AboutSection />
-      
-      <ProjectsSection />
-      
+      <Hero />
+      <About />
+      <Projects />
+      <Process />
+      <Contact />
       <Footer />
     </>
-  )
+  );
 }
 
 export default App
