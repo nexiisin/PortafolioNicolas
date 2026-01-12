@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import LogoLoop from './LogoLoop';
 
@@ -9,51 +10,32 @@ export default function Hero() {
           src="/Foto nico.png"
           alt="Nicolás Rodríguez"
           className="profile-photo"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+          transition={{ duration: 0.7, ease: [0.25, 0.4, 0.25, 1] }}
           style={{ width: 120, height: 120, borderRadius: '50%', objectFit: 'cover', marginBottom: '0.5rem' }}
         />
         <motion.h1
           className="hero-title"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.25, 0.4, 0.25, 1] }}
-          style={{ fontSize: '2rem', fontWeight: 700, margin: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.4, 0.25, 1] }}
+          style={{ fontSize: '2.2rem', fontWeight: 800, margin: 0, color: '#232323', letterSpacing: '-0.5px' }}
         >
-          Desarrollo soluciones web y automatizaciones reales
+          Desarrollador Full Stack y Automatización
         </motion.h1>
         <motion.p
           className="hero-subtitle"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
-          style={{ fontSize: '1.1rem', color: '#555', margin: 0, maxWidth: 480 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+          style={{ fontSize: '1.08rem', color: '#555', margin: 0, maxWidth: 480, fontWeight: 400, lineHeight: 1.6 }}
         >
-          Webs, apps y bots que optimizan procesos y ahorran tiempo.
+          Desarrollo aplicaciones web y soluciones digitales que conectan usuarios con sistemas de forma clara y segura.
         </motion.p>
-        <motion.div
-          className="hero-buttons"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
-          style={{ display: 'flex', gap: '1rem', marginTop: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}
-        >
-          <a href="#produccion" className="btn btn-primary" style={{ padding: '0.7em 1.5em', borderRadius: 6, background: '#646cff', color: '#fff', textDecoration: 'none', fontWeight: 500, fontSize: '1rem', border: 'none', transition: 'background 0.2s' }}>
-            Ver proyectos
-          </a>
-          <a href="#contact" className="btn btn-outline" style={{ padding: '0.7em 1.5em', borderRadius: 6, background: 'transparent', color: '#646cff', border: '2px solid #646cff', textDecoration: 'none', fontWeight: 500, fontSize: '1rem', transition: 'background 0.2s, color 0.2s' }}>
-            Contactarme
-          </a>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.4, 0.25, 1] }}
-          style={{ width: '100%', marginTop: '2.5rem' }}
-        >
+        <div style={{ width: '100%', marginTop: '2.5rem' }}>
           <LogoLoop speed={40} />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
